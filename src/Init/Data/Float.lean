@@ -28,6 +28,7 @@ opaque floatSpec : FloatSpec := {
 
 /-- Native floating point type, corresponding to the IEEE 754 *binary64* format
 (`double` in C or `f64` in Rust). -/
+@[opaque_repr]
 structure Float where
   val : floatSpec.float
 

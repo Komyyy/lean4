@@ -5,6 +5,7 @@ Authors: Leonardo de Moura
 -/
 prelude
 import Lean.Meta.InferType
+import Lean.Compiler.OpaqueReprAttr
 import Lean.Compiler.LCNF.Util
 import Lean.Compiler.LCNF.BaseTypes
 import Lean.Compiler.LCNF.CompilerM
@@ -42,7 +43,7 @@ Return `some fieldIdx` if `declName` is the name of an inductive datatype s.t.
 - This constructor has only one computationally relevant field.
 -/
 def hasTrivialStructure? (declName : Name) : CoreM (Option TrivialStructureInfo) := do
-  if isRuntimeBultinType declName then return none
+  if hasOpaqueReprAttribute (← getEnv) declName then return none
   let .inductInfo info ← getConstInfo declName | return none
   if info.isUnsafe || info.isRec then return none
   let [ctorName] := info.ctors | return none

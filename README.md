@@ -1,4 +1,4 @@
-This is the repository for **Lean 4**.
+This is the forked repository of [Lean 4](https://github.com/leanprover/lean4).
 
 We provide [nightly releases](https://github.com/leanprover/lean4-nightly/releases)
 and have just begun regular [stable point releases](https://github.com/leanprover/lean4/releases).

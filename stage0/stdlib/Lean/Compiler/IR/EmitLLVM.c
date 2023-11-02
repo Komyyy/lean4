@@ -46,7 +46,6 @@ LEAN_EXPORT lean_object* l_Lean_IR_EmitLLVM_buildLeanBoolTrue_x3f___boxed(lean_o
 LEAN_EXPORT lean_object* l_Array_foldlMUnsafe_fold___at_Lean_IR_emitLLVM___spec__3___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 static lean_object* l_Lean_IR_EmitLLVM_toCName___rarg___closed__5;
 LEAN_EXPORT lean_object* l_Lean_IR_LLVM_size__tType___boxed(lean_object*, lean_object*);
-extern lean_object* l_UInt32_size;
 uint32_t lean_string_utf8_get(lean_object*, lean_object*);
 static lean_object* l_Lean_IR_EmitLLVM_callUnboxForType___closed__5;
 static lean_object* l_Lean_IR_EmitLLVM_toCName___rarg___closed__1;
@@ -141,6 +140,7 @@ LEAN_EXPORT lean_object* l_Lean_mkHashMap___at_Lean_IR_EmitLLVM_emitDeclAux___sp
 static lean_object* l_Lean_IR_EmitLLVM_emitSProj___closed__3;
 lean_object* l_LLVM_i8Type(size_t, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_IR_EmitLLVM_emitFnDeclAux___lambda__2(lean_object*, uint8_t, size_t, lean_object*, lean_object*, size_t, lean_object*, lean_object*, lean_object*);
+uint8_t l___private_Init_Data_Option_Basic_0__beqOption____x40_Init_Data_Option_Basic___hyg_1119____at_Lean_IR_IRType_beq___spec__1(lean_object*, lean_object*);
 static lean_object* l_Lean_IR_EmitLLVM_emitTailCall___closed__3;
 LEAN_EXPORT lean_object* l_Lean_IR_EmitLLVM_callLeanIOResultIsError(size_t, size_t, size_t, lean_object*, lean_object*, lean_object*, lean_object*);
 lean_object* lean_mk_array(lean_object*, lean_object*);
@@ -218,7 +218,6 @@ LEAN_EXPORT lean_object* l_Lean_IR_EmitLLVM_emitFnBody___boxed(lean_object*, lea
 lean_object* lean_llvm_get_named_global(size_t, size_t, lean_object*, lean_object*);
 static lean_object* l_Lean_IR_EmitLLVM_callLeanMarkPersistentFn___closed__1;
 static lean_object* l_Lean_IR_EmitLLVM_emitTag___closed__2;
-uint8_t l___private_Init_Data_Option_Basic_0__beqOption____x40_Init_Data_Option_Basic___hyg_1116____at_Lean_IR_IRType_beq___spec__1(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_IR_getModuleFunctions___boxed(lean_object*, lean_object*, lean_object*);
 static lean_object* l_Lean_IR_EmitLLVM_getDecl___rarg___closed__1;
 LEAN_EXPORT lean_object* l_Lean_IR_EmitLLVM_builderGetInsertionFn___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
@@ -12720,7 +12719,7 @@ else
 {
 lean_object* x_47; uint8_t x_48; 
 lean_dec(x_3);
-x_47 = l_UInt32_size;
+x_47 = lean_cstr_to_nat("4294967296");
 x_48 = lean_nat_dec_lt(x_4, x_47);
 if (x_48 == 0)
 {
@@ -37502,7 +37501,7 @@ _start:
 lean_object* x_10; lean_object* x_11; uint8_t x_12; 
 x_10 = l_Lean_Expr_constName_x3f(x_1);
 x_11 = l_Lean_IR_EmitLLVM_emitMainFn___lambda__4___closed__3;
-x_12 = l___private_Init_Data_Option_Basic_0__beqOption____x40_Init_Data_Option_Basic___hyg_1116____at_Lean_IR_IRType_beq___spec__1(x_10, x_11);
+x_12 = l___private_Init_Data_Option_Basic_0__beqOption____x40_Init_Data_Option_Basic___hyg_1119____at_Lean_IR_IRType_beq___spec__1(x_10, x_11);
 lean_dec(x_10);
 if (x_12 == 0)
 {

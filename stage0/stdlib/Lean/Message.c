@@ -38,6 +38,7 @@ size_t lean_usize_shift_right(size_t, size_t);
 static lean_object* l_Lean_KernelException_toMessageData___closed__4;
 static lean_object* l_Lean___aux__Lean__Message______macroRules__Lean__termM_x21____1___closed__5;
 static lean_object* l_Lean_MessageData_instCoeStringMessageData___closed__1;
+static lean_object* l_Lean_KernelException_toMessageData___closed__50;
 static lean_object* l_Lean_KernelException_toMessageData___closed__36;
 LEAN_EXPORT lean_object* l_Lean_PersistentArray_mapMAux___at_Lean_MessageLog_errorsToWarnings___spec__2(lean_object*);
 LEAN_EXPORT lean_object* l_Array_mapMUnsafe_map___at_Lean_MessageData_formatAux___spec__1(lean_object*, lean_object*, size_t, size_t, lean_object*, lean_object*);
@@ -273,6 +274,7 @@ LEAN_EXPORT uint8_t l_Array_anyMUnsafe_any___at_Lean_MessageData_hasSyntheticSor
 static lean_object* l_Lean___aux__Lean__Message______macroRules__Lean__termM_x21____1___closed__3;
 static lean_object* l_Lean___aux__Lean__Message______macroRules__Lean__termM_x21____1___closed__2;
 static lean_object* l_Lean_MessageData_arrayExpr_toMessageData___closed__2;
+static lean_object* l_Lean_KernelException_toMessageData___closed__48;
 LEAN_EXPORT lean_object* l_Lean_MessageLog_instAppendMessageLog;
 uint8_t lean_nat_dec_lt(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Message_endPos___default;
@@ -343,6 +345,7 @@ lean_object* l_Lean_PersistentArray_forM___rarg(lean_object*, lean_object*, lean
 static lean_object* l_Lean_MessageData_format___closed__1;
 size_t lean_usize_add(size_t, size_t);
 LEAN_EXPORT lean_object* l_Lean_MessageData_instCoeListMessageData;
+static lean_object* l_Lean_KernelException_toMessageData___closed__49;
 static lean_object* l_Lean_MessageData_instCoeLevelMessageData___closed__1;
 LEAN_EXPORT lean_object* l_List_mapTR_loop___at_Lean_stringToMessageData___spec__3___at_Lean_stringToMessageData___spec__4(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_MessageLog_append(lean_object*, lean_object*);
@@ -7188,6 +7191,34 @@ lean_ctor_set(x_2, 0, x_1);
 return x_2;
 }
 }
+static lean_object* _init_l_Lean_KernelException_toMessageData___closed__48() {
+_start:
+{
+lean_object* x_1; 
+x_1 = lean_mk_string_from_bytes("(kernel) interrupted", 20);
+return x_1;
+}
+}
+static lean_object* _init_l_Lean_KernelException_toMessageData___closed__49() {
+_start:
+{
+lean_object* x_1; lean_object* x_2; 
+x_1 = l_Lean_KernelException_toMessageData___closed__48;
+x_2 = lean_alloc_ctor(3, 1, 0);
+lean_ctor_set(x_2, 0, x_1);
+return x_2;
+}
+}
+static lean_object* _init_l_Lean_KernelException_toMessageData___closed__50() {
+_start:
+{
+lean_object* x_1; lean_object* x_2; 
+x_1 = l_Lean_KernelException_toMessageData___closed__49;
+x_2 = lean_alloc_ctor(0, 1, 0);
+lean_ctor_set(x_2, 0, x_1);
+return x_2;
+}
+}
 LEAN_EXPORT lean_object* l_Lean_KernelException_toMessageData(lean_object* x_1, lean_object* x_2) {
 _start:
 {
@@ -7577,12 +7608,19 @@ lean_dec(x_2);
 x_157 = l_Lean_KernelException_toMessageData___closed__44;
 return x_157;
 }
-default: 
+case 14:
 {
 lean_object* x_158; 
 lean_dec(x_2);
 x_158 = l_Lean_KernelException_toMessageData___closed__47;
 return x_158;
+}
+default: 
+{
+lean_object* x_159; 
+lean_dec(x_2);
+x_159 = l_Lean_KernelException_toMessageData___closed__50;
+return x_159;
 }
 }
 }
@@ -7992,6 +8030,12 @@ l_Lean_KernelException_toMessageData___closed__46 = _init_l_Lean_KernelException
 lean_mark_persistent(l_Lean_KernelException_toMessageData___closed__46);
 l_Lean_KernelException_toMessageData___closed__47 = _init_l_Lean_KernelException_toMessageData___closed__47();
 lean_mark_persistent(l_Lean_KernelException_toMessageData___closed__47);
+l_Lean_KernelException_toMessageData___closed__48 = _init_l_Lean_KernelException_toMessageData___closed__48();
+lean_mark_persistent(l_Lean_KernelException_toMessageData___closed__48);
+l_Lean_KernelException_toMessageData___closed__49 = _init_l_Lean_KernelException_toMessageData___closed__49();
+lean_mark_persistent(l_Lean_KernelException_toMessageData___closed__49);
+l_Lean_KernelException_toMessageData___closed__50 = _init_l_Lean_KernelException_toMessageData___closed__50();
+lean_mark_persistent(l_Lean_KernelException_toMessageData___closed__50);
 return lean_io_result_mk_ok(lean_box(0));
 }
 #ifdef __cplusplus
